@@ -32,7 +32,7 @@ public class ConvertionController {
             correctedValue = -1;
         }
 
-        if (errorMessage.isEmpty()) {
+        if (errorMessage.length() > 0) {
             return """
                 <style>
                     body {
@@ -82,8 +82,8 @@ public class ConvertionController {
             </style>
             <body>
                 <h1>Conversion Result</h1>
-                <p><b>Original (%d):</b> %s</p>
-                <p><b>Converted (%d):</b> %s</p>
+                <p><b>Original-%d:</b> %s</p>
+                <p><b>Converted-%d:</b> %s</p>
                 <p><b>BIN:</b> %s</p>
                 <p><b>OCT:</b> %s</p>
                 <p><b>DEC:</b> %s</p>
